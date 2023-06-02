@@ -1,0 +1,51 @@
+﻿<Window x:Class="Multi_Login.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Loaded="onload"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Arrival" Height="450" WindowStartupLocation="CenterScreen" Width="800"  WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="472*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="232*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFE63070" Offset="1" />
+                <GradientStop Color="#FFFE8704" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Grid.ColumnSpan="4" VerticalAlignment="Center" >
+            <Border Height="390" VerticalAlignment="Center" CornerRadius="0 0 180 0" Background="#100E17" MouseLeftButtonDown="Border_MouseLeftButtonDown_1">
+                <Label Content="Регистрация" Height="49" Margin="0,54,0,0" VerticalAlignment="Top" Width="194" Foreground="#DDFF0000" FontFamily="Bahnschrift" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="False"/>
+            </Border>
+        </Grid>
+
+        <Button Margin="273,284,45,74" Content="Добавить" Click="button1_Click" Grid.ColumnSpan="3" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="textBox4" materialDesign:HintAssist.Hint="Введите имя пользователя" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,150,45,215" FontFamily="Bahnschrift" Grid.ColumnSpan="3" />
+        <PasswordBox x:Name="textBox2" materialDesign:HintAssist.Hint="Введите пароль" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,182,45,185" FontFamily="Bahnschrift" Grid.ColumnSpan="3" />
+        <PasswordBox x:Name="textBox3" materialDesign:HintAssist.Hint="Повторите пароль" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,212,45,154" FontFamily="Bahnschrift" Grid.ColumnSpan="3" />
+        <TextBox x:Name="textBox1" materialDesign:HintAssist.Hint="Введите логин" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,120,45,247" FontFamily="Bahnschrift" Width="250" Grid.ColumnSpan="3" />
+        <StackPanel Grid.Column="3" Margin="132,0,0,0" Grid.RowSpan="7">
+            <Button Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
+                ToolTip="Close" x:Name="btnExit" Click="btnExit_Click">
+                <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30" />
+            </Button>
+        </StackPanel>
+    </Grid>
+
+</Window>

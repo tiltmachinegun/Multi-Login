@@ -1,0 +1,50 @@
+﻿<Window x:Class="Multi_Login.Arrival"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Loaded="onload"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Arrival" Height="450" Width="800"  WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="472*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="232*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFE63070" Offset="1" />
+                <GradientStop Color="#FFFE8704" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Grid.ColumnSpan="4" VerticalAlignment="Center" >
+            <Border Height="390" VerticalAlignment="Center" CornerRadius="0 0 180 0" Background="#100E17" MouseLeftButtonDown="Border_MouseLeftButtonDown_1">
+            </Border>
+        </Grid>
+        <Button Margin="273,284,45,74" Content="Добавить" Click="button1_Click" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtcount" materialDesign:HintAssist.Hint="Введите количество товара" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,150,45,215" FontFamily="Bahnschrift Light" Grid.ColumnSpan="3" />
+        <TextBox x:Name="txtcostbuy" materialDesign:HintAssist.Hint="Введите закупочную стоимость" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,182,45,185" FontFamily="Bahnschrift Light" Grid.ColumnSpan="3" />
+        <TextBox x:Name="txtcostsell" materialDesign:HintAssist.Hint="Введите стоимость продажи" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,212,45,154" FontFamily="Bahnschrift Light" Grid.ColumnSpan="3" />
+        <TextBox x:Name="txtname" materialDesign:HintAssist.Hint="Введите название товара" Foreground="White" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Margin="273,120,45,247" TextChanged="txtUsername_TextChanged" FontFamily="Bahnschrift Light" Width="250" Grid.ColumnSpan="3" />
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="306,78,0,0" SelectionChanged="comboBox1_SelectionChanged" materialDesign:HintAssist.Hint="Выберите склад" VerticalAlignment="Top" Width="188" Foreground="Red" BorderBrush="#89FFFFFF" Background="Transparent" Height="37" FontSize="20" Grid.ColumnSpan="3"/>
+        <StackPanel Grid.Column="3" Margin="132,0,0,0" Grid.RowSpan="7">
+            <Button Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
+                ToolTip="Close" x:Name="btnExit" Click="btnExit_Click">
+                <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30" />
+            </Button>
+        </StackPanel>
+    </Grid>
+
+</Window>

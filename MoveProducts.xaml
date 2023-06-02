@@ -1,0 +1,24 @@
+﻿<Window x:Class="Multi_Login.MoveProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Loaded="onload"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Перемещение товара" Height="218" Width="393" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" Margin="10" x:Name="comboBox1" materialDesign:HintAssist.Hint="С какого склада" FontFamily="Bahnschrift" SelectionChanged="comboBox1_SelectedIndexChanged"/>
+        <ComboBox Grid.Row="1" Margin="10,10,10,10" x:Name="comboBox2"  materialDesign:HintAssist.Hint="На какой склад" FontFamily="Bahnschrift" SelectionChanged="comboBox2_SelectionChanged"/>
+        <TextBox Grid.Row="2" Margin="10" x:Name="textBox1" materialDesign:HintAssist.Hint="Введите ID товара" FontFamily="Bahnschrift"/>
+        <Button Grid.Row="3" Margin="10" Content="Переместить" Click="button1_Click" FontFamily="Bahnschrift"/>
+    </Grid>
+</Window>
